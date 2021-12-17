@@ -15,8 +15,10 @@ const handleCake = (num) =>{
 function Cake(props) {
     return (
         <div>
-            <h2>Number of Cakes - {handleCake(props.numOfCake)}</h2>
-            <button onClick={props.buyCake}>Buy Cake</button>
+            <h2 className="flex justify-center">Number of Cakes - {handleCake(props.numOfCake)}</h2><br/>
+      <div className="flex justify-center">
+            <button className="bg-slate-500 border-2 rounded  border-slate-500" onClick={props.buyCake}>Buy Cake</button>
+            </div>
         </div>
     )
 }

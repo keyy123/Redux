@@ -1,11 +1,19 @@
 import React from 'react'
-import { buyCake } from '../redux'
+import { buyCake } from '../redux/cake/cakeAction'
 import {connect} from 'react-redux'
+
+const soldOut = "Sorry, sold out!"
+
+const handleCake = (num) =>{
+  if(num <= 0) return soldOut
+  else return num
+}
+
 
 function Cake(props) {
     return (
         <div>
-            <h2>Number of Cakes - {props.numOfCake}</h2>
+            <h2>Number of Cakes - {handleCake(props.numOfCake)}</h2>
             <button onClick={props.buyCake}>Buy Cake</button>
         </div>
     )

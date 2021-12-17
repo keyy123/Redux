@@ -5,7 +5,7 @@ const reduxLogger = require('redux-logger')
 const logger = reduxLogger.createLogger()
 const applyMiddleware = redux.applyMiddleware
 
-
+const middleware = [logger]
 const createStore = redux.createStore
 
 
@@ -62,7 +62,7 @@ const rootReducer = combineReducer({
     iceCream: iceCreamReducer
 })
 
-const store = createStore(rootReducer, applyMiddleware(logger))
+const store = createStore(rootReducer, applyMiddleware(...middleware))
 
 
 

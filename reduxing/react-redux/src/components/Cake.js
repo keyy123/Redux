@@ -5,10 +5,12 @@ import {connect} from 'react-redux'
 const soldOut = "Sorry, sold out!"
 
 const handleCake = (num) =>{
-  if(num <= 0) return soldOut
-  else return num
+  if(num <= 0) {
+    return soldOut
+  }else{
+    return `Hurry, We've only got ${num} more cakes left`
 }
-
+}
 
 function Cake(props) {
     return (

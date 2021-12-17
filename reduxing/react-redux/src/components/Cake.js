@@ -17,8 +17,9 @@ function Cake(props) {
         <div>
             <h2 className="flex justify-center">Number of Cakes - {handleCake(props.numOfCake)}</h2><br/>
       <div className="flex justify-center">
-            <button className="bg-slate-500 border-2 rounded  border-slate-500" onClick={props.buyCake}>Buy Cake</button>
+            <button className="mb-5 bg-slate-500 border-2 rounded  border-slate-500" onClick={props.buyCake}>Buy Cake</button>
             </div>
+            
         </div>
     )
 }
